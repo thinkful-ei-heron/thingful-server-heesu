@@ -53,6 +53,9 @@ async function checkThingExists(req, res, next) {
   } catch (error) {
     next(error)
   }
-}
+};
 
-module.exports = thingsRouter
+module.exports = thingsRouter;
+
+
+
