@@ -1,10 +1,9 @@
 const express = require('express');
 const path = require('path');
 const ReviewsService = require('./reviews-service');
-const { requireAuth } = require('../middleware/basic-thingful');
-
 const reviewsRouter = express.Router();
 const jsonBodyParser = express.json();
+const { requireAuth } = require('../middleware/jwt-auth');
 
 reviewsRouter
   .route('/')
@@ -33,4 +32,7 @@ reviewsRouter
       .catch(next)
     })
 
-module.exports = reviewsRouter
+module.exports = reviewsRouter;
+
+
+
